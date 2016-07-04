@@ -12,7 +12,8 @@
  */
 var FastCast = (function(){
 
-    var channel = null,
+    var tizen = tizen || { tvinputdevice: { getSupportedKeys: function() { return []; } } },
+        channel = null,
         ownName = "TV",
         eventBus = null,
         tvKeys = {
